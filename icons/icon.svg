@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Background -->
+  <rect width="128" height="128" fill="#6366f1" rx="24"/>
+  
+  <!-- Book -->
+  <path d="M32 28 L32 100 Q32 110 42 110 L86 110 Q96 110 96 100 L96 28 Q96 28 64 35 Q32 28 32 28" fill="#ffffff" opacity="0.95"/>
+  
+  <!-- Book spine -->
+  <path d="M42 30 L42 108 Q42 105 50 105 L50 30" fill="#f0f0f0"/>
+  
+  <!-- Stars for learning -->
+  <g transform="translate(75, 50)">
+    <polygon points="0,-8 2.4,-2.4 8,-1.2 4,2.4 5.6,8 0,4.8 -5.6,8 -4,2.4 -8,-1.2 -2.4,-2.4" fill="#fbbf24"/>
+  </g>
+  
+  <g transform="translate(85, 60)">
+    <polygon points="0,-6 1.8,-1.8 6,-0.9 3,1.8 4.2,6 0,3.6 -4.2,6 -3,1.8 -6,-0.9 -1.8,-1.8" fill="#f59e0b" opacity="0.8"/>
+  </g>
+  
+  <!-- Text "WORD" -->
+  <text x="64" y="85" font-size="18" font-weight="bold" text-anchor="middle" fill="#6366f1" font-family="Arial">WORD</text>
+</svg>
