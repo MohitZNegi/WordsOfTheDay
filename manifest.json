@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Words of the Day",
+  "version": "1.0.0",
+  "description": "Capture and learn new words while browsing. Right-click any word to save, organize by date, and ace quizzes!",
+  "permissions": [
+    "storage",
+    "contextMenus"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Words of the Day - Learn new words",
+    "default_icon": "icons/icon.svg"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
