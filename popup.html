@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Words of the Day</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <h1>📚 Words of the Day</h1>
+        <div class="header-actions">
+          <button
+            id="startQuizBtn"
+            class="btn btn-primary"
+            title="Start a quiz to test your knowledge"
+          >
+            🎯 Quiz
+          </button>
+        </div>
+      </div>
+
+      <!-- View Selector -->
+      <div class="view-selector">
+        <button class="view-btn active" data-view="list">📋 List</button>
+        <button class="view-btn" data-view="calendar">📅 Calendar</button>
+      </div>
+
+      <!-- List View -->
+      <div id="listView" class="view active">
+        <!-- Dates List -->
+        <div id="datesList" class="dates-list">
+          <p class="empty-state">
+            No words saved yet. Highlight a word and right-click to save it!
+          </p>
+        </div>
+
+        <!-- Words Container -->
+        <div id="wordsContainer" class="words-container hidden">
+          <button id="backBtn" class="btn btn-secondary">← Back</button>
+          <h2 id="selectedDateTitle"></h2>
+          <div id="wordsList" class="words-list"></div>
+        </div>
+
+        <!-- Word Details Container -->
+        <div id="wordDetailsContainer" class="word-details-container hidden">
+          <button id="backToWordsBtn" class="btn btn-secondary">← Back</button>
+          <div class="word-header">
+            <h2 id="selectedWord"></h2>
+            <button id="deleteWordBtn" class="btn btn-danger btn-small">
+              🗑️ Delete
+            </button>
+          </div>
+          <div class="word-details">
+            <div class="detail-section">
+              <h3>Type</h3>
+              <p id="wordMeaning"></p>
+            </div>
+            <div class="detail-section">
+              <h3>Definition</h3>
+              <p id="wordDefinition"></p>
+            </div>
+            <div class="detail-section">
+              <h3>Example</h3>
+              <p id="wordExample"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calendar View -->
+      <div id="calendarView" class="view hidden">
+        <div id="calendar" class="calendar"></div>
+        <div id="calendarWordsContainer" class="words-container hidden">
+          <button id="calendarBackBtn" class="btn btn-secondary">← Back</button>
+          <h2 id="calendarDateTitle"></h2>
+          <div id="calendarWordsList" class="words-list"></div>
+        </div>
+      </div>
+
+      <!-- Quiz View -->
+      <div id="quizView" class="view hidden">
+        <button id="quizBackBtn" class="btn btn-secondary">← Back</button>
+        <div id="quizContainer" class="quiz-container"></div>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
